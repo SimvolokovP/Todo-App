@@ -1,0 +1,10 @@
+.svg-class path {
+    stroke: #272727;
+    transition: stroke .3s ease-in-out;
+}
+
+@media (hover:hover) {
+    .svg-class:hover path {
+        stroke: #F76C6A;
+    }
+}

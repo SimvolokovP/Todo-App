@@ -1,0 +1,150 @@
+.item {
+    width: 100%;
+    background-color: #F79E89;
+    padding: 8px 41px 8px 16px;
+    border-radius: 12px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+    user-select: none;
+    position: relative;
+    animation: newItemAnimation .3s linear forwards;
+}
+
+.item.deleted-item {
+    animation: removedItemAnimation 1s cubic-bezier(0.55, -0.04, 0.91, 0.94);
+    transform-origin: 0% 100%;
+}
+
+.item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item__actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.item__title {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+}
+
+.item__title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transition: width .3s ease-in-out;
+}
+
+.item__remove svg path {
+    stroke: #fff;
+    transition: stroke .3s ease-in-out;
+}
+
+.item__edit svg path {
+    stroke: #fff;
+    transition: stroke .3s ease-in-out;
+}
+
+.item__complete {
+    position: relative;
+    width: 34px;
+    height: 28px;
+}
+
+.item__complete svg {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.item__complete svg path {
+    stroke: #fff;
+    transition: stroke .3s ease-in-out;
+}
+
+.item__complete--disable {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.item__complete--enable {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+@media (hover:hover) {
+    .item__remove:hover svg path {
+        stroke: #F76C6A;
+    }
+
+    .item__edit:hover svg path {
+        stroke: #F76C6A;
+    }
+
+    .item__complete:hover svg path {
+        stroke: #F76C6A;
+    }
+}
+
+.item.complete {
+    transform: scale(0.97);
+    background-color: #F76C6A;
+}
+
+.item.complete .item__title::after {
+    width: 100%;
+}
+
+.item.complete .item__complete--disable {
+    opacity: 0;
+}
+
+.item.complete .item__complete--enable {
+    opacity: 1;
+}
+
+.item__input {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    width: 327px;
+    height: 32px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    outline: #fff;
+    color: #fff;
+    font-weight: 400;
+    padding: 5px 60px 5px 5px;
+}
+
+.item__input-button {
+    position: absolute;
+    left: 291px;
+    top: 8px;
+    height: 32px;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    outline: #fff;
+    color: #F79E89;
+    font-weight: 400;
+    cursor: pointer;
+    width: 52px;
+}

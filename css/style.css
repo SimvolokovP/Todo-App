@@ -1,0 +1,12 @@
+@import 'normalize.css';
+@import 'global.css';
+
+
+@import 'header.css';
+@import 'app.css';
+@import 'item.css';
+
+@import 'preload.css';
+@import 'modal.css';
+@import 'svg-class.css';
+@import 'animations.css';

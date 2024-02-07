@@ -1,0 +1,40 @@
+.preload {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.preload > * {
+    transition: all .3s ease-in-out;;
+}
+
+.preload.loaded > * {
+    opacity: 0;
+}
+
+.preload.loaded {
+    transition-delay: 250ms;
+    transform: translateY(100%);
+    background-color: transparent;
+}
+
+
+.preload__text {
+    background-image: #F76C6A;
+    padding-inline-start: 16px;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.5px #fff;
+    animation: loadingText linear 2s infinite;
+    
+}

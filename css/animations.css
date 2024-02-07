@@ -1,0 +1,41 @@
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes loadingText {
+    0% {
+        background-position: 100%;
+    }
+
+   100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes newItemAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+@keyframes removedItemAnimation {
+    0% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(400px) rotate(90deg);
+    }
+} 
